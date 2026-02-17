@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#efe8e0" />
+  <rect x="36" y="40" width="568" height="280" rx="20" fill="#ffffff" />
+  <text x="320" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#444">
+    CSV Before
+  </text>
+  <text x="320" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#777">
+    Messy rows, extra whitespace
+  </text>
+</svg>

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Automation Scripts Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <header class="hero">
+        <!-- Hero intro for the portfolio landing page -->
+        <h1>Automation Scripts Portfolio</h1>
+        <p>
+          A curated set of practical automation demos focused on cleaning data, harvesting
+          ecommerce insights, and sending emails at scale.
+        </p>
+      </header>
+
+      <section class="cards">
+        <!-- CSV Optimizer card -->
+        <article class="card" id="csv-optimizer">
+          <div>
+            <h2>CSV Optimizer</h2>
+            <p>Cleans messy CSV files.</p>
+          </div>
+          <div class="meta">
+            <a href="../excel-cleaner/">View GitHub Folder</a>
+          </div>
+          <div class="panel-grid">
+            <div class="figure">
+              <img src="images/csv-before.svg" alt="CSV before cleanup screenshot placeholder" />
+              <span>Before cleanup</span>
+            </div>
+            <div class="figure">
+              <img src="images/csv-after.svg" alt="CSV after cleanup screenshot placeholder" />
+              <span>After cleanup</span>
+            </div>
+          </div>
+          <div class="actions">
+            <button type="button" data-action="import">Import Sample CSV</button>
+            <button type="button" class="secondary" data-action="export">Export Cleaned CSV</button>
+          </div>
+        </article>
+
+        <!-- Web Scraper card -->
+        <article class="card" id="web-scraper">
+          <div>
+            <h2>Web Scraper</h2>
+            <p>Scrapes product names and prices from Amazon.</p>
+          </div>
+          <div class="meta">
+            <a href="../web-scraper/">View GitHub Folder</a>
+          </div>
+          <div class="panel-grid">
+            <div class="figure">
+              <img src="images/web-scraper-results.svg" alt="Web scraper results screenshot placeholder" />
+              <span>Scraped results</span>
+            </div>
+          </div>
+          <div class="actions">
+            <button type="button" data-action="scraper">Run Scraper Demo</button>
+          </div>
+        </article>
+
+        <!-- Email Bot card -->
+        <article class="card" id="email-bot">
+          <div>
+            <h2>Email Bot</h2>
+            <p>Sends personalized emails using Gmail SMTP.</p>
+          </div>
+          <div class="meta">
+            <a href="../email-bot/">View GitHub Folder</a>
+          </div>
+          <div class="panel-grid">
+            <div class="figure">
+              <img src="images/email-bot-log.svg" alt="Email bot success log screenshot placeholder" />
+              <span>Delivery log</span>
+            </div>
+          </div>
+          <div class="actions">
+            <button type="button" data-action="email">Preview Email Demo</button>
+          </div>
+        </article>
+      </section>
+
+      <footer>
+        <p>Built for GitHub Pages. Replace placeholder screenshots when ready.</p>
+      </footer>
+    </main>
+
+    <script>
+      // Simple demo alerts for placeholder buttons.
+      const actions = {
+        import: "Sample CSV imported (demo).",
+        export: "Cleaned CSV exported (demo).",
+        scraper: "Scraper demo queued (demo).",
+        email: "Email preview generated (demo).",
+      };
+
+      document.querySelectorAll("button[data-action]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const message = actions[button.dataset.action] || "Demo action";
+          alert(message);
+        });
+      });
+    </script>
+  </body>
+</html>

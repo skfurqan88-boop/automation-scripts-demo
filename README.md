@@ -25,3 +25,7 @@ python3 web-scraper/script.py "wireless mouse" -o results.csv
 # Email bot
 python3 email-bot/script.py recipients.csv "Hello" "Hi {name}, this is a test email."
 ```
+
+## Live Portfolio
+
+View the GitHub Pages site: https://skfurqan88-boop.github.io/automation-scripts-demo
