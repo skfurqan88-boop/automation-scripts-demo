@@ -33,6 +33,52 @@
           <div class="meta">
             <a href="../excel-cleaner/">View GitHub Folder</a>
           </div>
+          <!-- Sample output tables that update based on the demo actions -->
+          <div class="output-grid">
+            <div class="output">
+              <h3>Before cleanup</h3>
+              <table class="data-table" id="csv-before-table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Region</th>
+                    <th>Spend</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>  Ava  </td>
+                    <td> West </td>
+                    <td>  420 </td>
+                  </tr>
+                  <tr>
+                    <td>  </td>
+                    <td>East</td>
+                    <td>  0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="output">
+              <h3>After cleanup</h3>
+              <table class="data-table" id="csv-after-table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Region</th>
+                    <th>Spend</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Ava</td>
+                    <td>West</td>
+                    <td>420</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
           <div class="panel-grid">
             <div class="figure">
               <img src="images/csv-before.svg" alt="CSV before cleanup screenshot placeholder" />
@@ -44,8 +90,8 @@
             </div>
           </div>
           <div class="actions">
-            <button type="button" data-action="import">Import Sample CSV</button>
-            <button type="button" class="secondary" data-action="export">Export Cleaned CSV</button>
+            <button type="button" onclick="importCSV()">Import Sample CSV</button>
+            <button type="button" class="secondary" onclick="exportCSV()">Export Cleaned CSV</button>
           </div>
         </article>
 
@@ -58,6 +104,15 @@
           <div class="meta">
             <a href="../web-scraper/">View GitHub Folder</a>
           </div>
+          <!-- Output list that updates when the scraper demo runs -->
+          <div class="output">
+            <h3>Sample output</h3>
+            <ul class="data-list" id="scraper-output">
+              <li>Wireless Mouse - $19.99</li>
+              <li>USB-C Hub - $24.50</li>
+              <li>Noise Cancelling Headphones - $89.00</li>
+            </ul>
+          </div>
           <div class="panel-grid">
             <div class="figure">
               <img src="images/web-scraper-results.svg" alt="Web scraper results screenshot placeholder" />
@@ -65,7 +120,7 @@
             </div>
           </div>
           <div class="actions">
-            <button type="button" data-action="scraper">Run Scraper Demo</button>
+            <button type="button" onclick="runScraper()">Run Scraper Demo</button>
           </div>
         </article>
 
@@ -78,6 +133,16 @@
           <div class="meta">
             <a href="../email-bot/">View GitHub Folder</a>
           </div>
+          <!-- Output area that updates with an email preview -->
+          <div class="output">
+            <h3>Email preview</h3>
+            <pre class="email-preview" id="email-output">Hi Alex,
+
+Thanks for signing up. Your setup guide is ready.
+
+Cheers,
+Automation Bot</pre>
+          </div>
           <div class="panel-grid">
             <div class="figure">
               <img src="images/email-bot-log.svg" alt="Email bot success log screenshot placeholder" />
@@ -85,7 +150,7 @@
             </div>
           </div>
           <div class="actions">
-            <button type="button" data-action="email">Preview Email Demo</button>
+            <button type="button" onclick="previewEmail()">Preview Email Demo</button>
           </div>
         </article>
       </section>
@@ -94,22 +159,6 @@
         <p>Built for GitHub Pages. Replace placeholder screenshots when ready.</p>
       </footer>
     </main>
-
-    <script>
-      // Simple demo alerts for placeholder buttons.
-      const actions = {
-        import: "Sample CSV imported (demo).",
-        export: "Cleaned CSV exported (demo).",
-        scraper: "Scraper demo queued (demo).",
-        email: "Email preview generated (demo).",
-      };
-
-      document.querySelectorAll("button[data-action]").forEach((button) => {
-        button.addEventListener("click", () => {
-          const message = actions[button.dataset.action] || "Demo action";
-          alert(message);
-        });
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

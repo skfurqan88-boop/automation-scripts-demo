@@ -98,6 +98,70 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
+.output-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.output {
+  background: #f9f6f1;
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid #e5dfd8;
+}
+
+.output h3 {
+  margin: 0 0 12px;
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.data-table th,
+.data-table td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid #e1dad1;
+}
+
+.data-table th {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.data-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+
+.data-list li {
+  padding: 10px 12px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5dfd8;
+}
+
+.email-preview {
+  margin: 0;
+  font-family: "Courier New", monospace;
+  font-size: 0.9rem;
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #e5dfd8;
+  white-space: pre-wrap;
+}
+
 .figure {
   background: var(--paper);
   border-radius: 16px;

@@ -29,3 +29,4 @@ python3 email-bot/script.py recipients.csv "Hello" "Hi {name}, this is a test em
 ## Live Portfolio
 
 View the GitHub Pages site: https://skfurqan88-boop.github.io/automation-scripts-demo
+Note: Click buttons on the live site to test demo outputs.
